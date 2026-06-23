@@ -1,1 +1,3 @@
-API_TOKEN = "8733264244:AAGHq5vSwpAigR9xuxy5zwmRbf-hLiwEeak"
+import os
+
+API_TOKEN = os.getenv("BOT_TOKEN")
