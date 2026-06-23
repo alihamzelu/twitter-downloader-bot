@@ -1,6 +1,6 @@
 import re
 from keyboards.quality_kb import quality_keyboard
-from utils.state import user_data , user_state
+from utils.state import user_data, user_state
 
 twitter_pattern = r"(https?://(www\.)?(x\.com|twitter\.com)/\S+)"
 
@@ -22,6 +22,11 @@ def register_link_handler(bot):
 
             bot.send_message(
                 message.chat.id,
-                "📥 Select video quality:",
+                "🎬 Great! Now choose video quality:",
                 reply_markup=quality_keyboard()
+            )
+        else:
+            bot.send_message(
+                message.chat.id,
+                "❌ Please send a valid Twitter/X video link."
             )

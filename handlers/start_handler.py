@@ -7,6 +7,13 @@ def register_start_handler(bot):
 
         bot.send_message(
             message.chat.id,
-            f"Welcome To Twitter Video Downloader {message.from_user.first_name} \n Send me a Twitter/X post link and I'll download the video for you.",
+            f"""👋 Welcome, {message.from_user.first_name}!
+
+📥 Twitter (X) Video Downloader Bot
+
+✨ Send me a video link and I’ll download it for you instantly.
+
+🚀 Fast • Simple • Free
+""",
             reply_markup=main_keyboard()
         )
